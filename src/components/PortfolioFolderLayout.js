@@ -25,6 +25,7 @@ const tabs = [
   { id: "about", label: "About Me", className: "green" },
   { id: "projects", label: "Projects", className: "purple" },
   { id: "education", label: "Education", className: "blue" },
+  { id: "other", label: "Education", className: "yellow" },
 ];
 
 const PortfolioFolderLayout = () => {

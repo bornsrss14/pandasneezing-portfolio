@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Lato&display=swap");
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 :root {
   --color-lightGray: #6f6f6f;
 }
@@ -15,11 +19,12 @@
 
 /*  POST IT*/
 .flex_R {
-  margin-top: 4rem;
   display: flex;
-  margin-left: 4rem;
+
   flex-direction: row;
   gap: 1rem;
+  max-width: 100%;
+  margin: 4rem 1rem;
 }
 .postit {
   width: 250px;
@@ -98,15 +103,16 @@
 
 .card {
   position: relative;
-  width: 350px;
+  width: 70%;
+  margin: 4rem 2rem;
   background: white;
   padding: 40px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  border-radius: 12px 0 12px 12px;
-  height: 35rem;
+  border-radius: 0px 12px 12px 12px;
+  height: 30rem;
 }
 .card-white {
-  width: 189px;
+  width: 155px;
   background: white;
   position: absolute;
   padding: 10px 20px;
@@ -114,21 +120,20 @@
   color: white;
   font-weight: bold;
   height: 2.5rem;
-  transform: rotate(90deg);
-  top: 4.2rem;
-  right: -6.71rem;
-  box-shadow: 1px 0 4px rgba(0, 0, 0, 0.1);
+  top: -2.2rem;
+  right: 28.9rem;
+  box-shadow: 0px -4px 6px -2px rgba(0, 0, 0, 0.2);
   border: none;
 }
 
 .tabs {
   position: absolute;
-  top: 360px;
-  right: -190px;
+  top: -38px;
+  right: 52px;
   display: flex;
-  transform: rotate(90deg);
+  /* transform: rotate(90deg); */
   flex-direction: row;
-  gap: 14px;
+  gap: 0px;
 }
 
 .tab {
@@ -137,7 +142,7 @@
   color: white;
   cursor: pointer;
   font-weight: bold;
-  border: none;
+  border: none;¨
 }
 
 .green {
@@ -153,4 +158,35 @@
 .content {
   margin-top: 20px;
   min-height: 120px;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  place-items: center;
+  gap: 0.65rem;
+}
+.search {
+  justify-self: center;
+  border: none;
+  padding: 1.1rem 1.6rem;
+  font-size: 1.8rem;
+  border-radius: 0.7rem;
+  width: 40rem;
+  transition: all 0.3s;
+  color: var(--color-text);
+
+  /* background-color: var(--color-background-900); */
+  background-color: var(--color-primary-light);
+}
+
+.img-full-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.grid-section-projects {
+  display: grid;
+  grid-template-columns: 26rem 1fr;
 }
