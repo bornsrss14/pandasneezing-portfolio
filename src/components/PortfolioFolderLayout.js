@@ -1,6 +1,12 @@
 import { useState } from "react";
 
 const content = {
+  default: (
+    <p>
+      Aqui podrás encontrar un poco de mis proyectos personales sakdnsalnd
+      sadnkasdnasldn
+    </p>
+  ),
   about: (
     <p>
       I am a passionate developer with a focus on creating clean and efficient
@@ -19,17 +25,21 @@ const content = {
       certifications in web development.
     </p>
   ),
+  other: (
+    <p>My background incesto es otro ejemplo de como se puede renderizar</p>
+  ),
 };
 
 const tabs = [
-  { id: "about", label: "About Me", className: "green" },
-  { id: "projects", label: "Projects", className: "purple" },
-  { id: "education", label: "Education", className: "blue" },
-  { id: "other", label: "Education", className: "yellow" },
+  { id: "about", label: "Pokedex", className: "green" },
+  { id: "projects", label: "Notaría 9", className: "purple" },
+  { id: "education", label: "MUBI::", className: "blue" },
+  { id: "other", label: "Hiking Map", className: "yellow" },
+  { id: "other", label: "To-do list", className: "red" },
 ];
 
 const PortfolioFolderLayout = () => {
-  const [activeTab, setActiveTab] = useState("about");
+  const [activeTab, setActiveTab] = useState("default");
 
   return (
     <>
