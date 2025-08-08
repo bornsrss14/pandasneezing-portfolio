@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export const LogoScalable = ({ customHeight, customWidth }) => {
+export const LogoScalable = ({ imagenImg, customHeight, customWidth }) => {
   const containerLogo = {
     width: customWidth,
     height: customHeight,
@@ -11,11 +11,7 @@ export const LogoScalable = ({ customHeight, customWidth }) => {
   return (
     <div style={containerLogo}>
       <Link to={"/"}>
-        <img
-          className="img-full-cover"
-          src="https://as1.ftcdn.net/jpg/03/52/92/98/1000_F_352929888_4qsEWbJfmOrYWiJJpuEqfSyPDGryMkuH.jpg"
-          alt="MUBI logo"
-        />
+        <img className="img-full-cover" src={imagenImg} alt="MUBI logo" />
       </Link>
     </div>
   );

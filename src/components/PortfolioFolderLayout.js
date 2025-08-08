@@ -2,10 +2,21 @@ import { useState } from "react";
 
 const content = {
   default: (
-    <p>
-      Aqui podrás encontrar un poco de mis proyectos personales sakdnsalnd
-      sadnkasdnasldn
-    </p>
+    <div>
+      <p>
+        Bienvenido a mi selección de proyectos más destacados. Aquí encontrarás
+        aplicaciones y sitios web desarrollados con <strong>React</strong>,
+        <strong>JavaScript</strong> y un enfoque en{" "}
+        <strong>diseño responsivo</strong>y <strong>UX/UI</strong>.
+      </p>
+      <p>
+        Cada proyecto incluye una vista previa animada y una breve descripción
+        para que puedas conocer su funcionalidad y el problema que resuelve.
+      </p>
+      <p>Explora las pestañas de colores para descubrir cada uno en detalle.</p>
+      <p>Explora mi proyecto con el demo live en cada link</p>
+      <p>Mi codigo disponible en cada repositorio de git</p>
+    </div>
   ),
   about: (
     <p>
@@ -35,14 +46,14 @@ const tabs = [
   { id: "projects", label: "Notaría 9", className: "purple" },
   { id: "education", label: "MUBI::", className: "blue" },
   { id: "other", label: "Hiking Map", className: "yellow" },
-  { id: "other", label: "To-do list", className: "red" },
+  { id: "rosrio", label: "To-do list", className: "red" },
 ];
 
 const PortfolioFolderLayout = () => {
   const [activeTab, setActiveTab] = useState("default");
 
   return (
-    <>
+    <div>
       <div className="card">
         <button className="card-white"></button>
         <h1>Ros's Classified File.</h1>
@@ -50,7 +61,9 @@ const PortfolioFolderLayout = () => {
           {tabs.map((tab) => (
             <button
               key={tab.id}
-              className={`tab ${tab.className}`}
+              className={`tab ${tab.className} ${
+                activeTab === tab.id ? "activeSelected" : ""
+              }`}
               onClick={() => setActiveTab(tab.id)}
             >
               {tab.label}
@@ -59,7 +72,7 @@ const PortfolioFolderLayout = () => {
         </div>
         <div className="content">{content[activeTab]}</div>
       </div>
-    </>
+    </div>
   );
 };
 
