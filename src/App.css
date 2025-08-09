@@ -122,19 +122,22 @@ li {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   border-radius: 0px 12px 12px 12px;
   height: 30rem;
-  z-index: 200; /* arriba */
 }
-.card::after {
-  pointer-events: none;
+.cubierta-blanca {
+  position: absolute;
+  top: 0; /* Pegado arriba */
+  left: 0;
+  width: 100%; /* Ocupa todo el ancho del padre */
+  height: 24px;
+  background-color: white;
+  z-index: 100;
 }
 
 .tabs {
   position: absolute;
-  top: -35px;
-
-  right: 69px;
+  top: -38px;
+  right: 89px;
   display: flex;
-  /* transform: rotate(90deg); */
   flex-direction: row;
   gap: 0px;
 }
@@ -152,16 +155,23 @@ li {
 .tab:active {
   background-color: rgba(34, 0, 255, 0.218);
 }
-.tab.activeSelected {
-  background: #ffd54f;
-  transform: translateY(-14px);
+
+.estiloBotonNormal {
+  transform: translateY(14px) !important;
+}
+
+.estiloBotonActivo {
+  transform: translateY(0px) !important;
+  background: yellow !important;
+  font-weight: 700 !important;
+  color: gray !important;
 }
 
 .card-white {
   position: absolute;
   top: -2.2rem; /* sobresale hacia arriba */
   left: 0; /* pegado al borde izquierdo del padre */
-  width: 170px;
+  width: 250px;
   height: 2.5rem;
   background: white;
 

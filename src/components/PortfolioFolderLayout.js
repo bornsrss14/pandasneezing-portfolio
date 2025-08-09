@@ -53,8 +53,9 @@ const PortfolioFolderLayout = () => {
   const [activeTab, setActiveTab] = useState("default");
 
   return (
-    <div>
+    <>
       <div className="card">
+        <div className="cubierta-blanca"></div>
         <button className="card-white"></button>
         <h1>Ros's Classified File.</h1>
         <div className="tabs">
@@ -62,7 +63,7 @@ const PortfolioFolderLayout = () => {
             <button
               key={tab.id}
               className={`tab ${tab.className} ${
-                activeTab === tab.id ? "activeSelected" : ""
+                activeTab === tab.id ? "estiloBotonActivo" : "estiloBotonNormal"
               }`}
               onClick={() => setActiveTab(tab.id)}
             >
@@ -72,7 +73,7 @@ const PortfolioFolderLayout = () => {
         </div>
         <div className="content">{content[activeTab]}</div>
       </div>
-    </div>
+    </>
   );
 };
 
