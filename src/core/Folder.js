@@ -1,12 +1,19 @@
 import React from "react";
 
-const Folder = ({ label = "Proyecto", color = "#FACC15" }) => {
-  const style = { backgroundColor: color };
+const Folder = ({
+  linkTo,
+  linkMedia,
+  label = "Proyecto",
+  color = "#FACC15",
+}) => {
+  const style = { backgroundColor: color, color: "white" };
   return (
-    <div className="folder typewriter" style={style}>
-      <div style={style} className="folder-tab"></div>
-      <span className="folder-label">{label}</span>
-    </div>
+    <a className="slide-top" target="_blank" rel="noreferrer" href={linkMedia}>
+      <div className="folder shadow-pop-tl typewriter" style={style}>
+        <div style={style} className="folder-tab"></div>
+        <span className="folder-label">{label}</span>
+      </div>
+    </a>
   );
 };
 

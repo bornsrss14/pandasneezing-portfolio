@@ -9,12 +9,21 @@ import PostIt from "../core/PostIt";
 import TypeIt from "typeit-react";
 
 import { IconChevronDown } from "@tabler/icons-react";
+import Footer from "../components/Footer";
+import Titulo from "../core/Titulo";
+import { SectionSubtitle } from "../core/SectionSubtitle";
+import { Link } from "react-router-dom";
 
 export const Home = () => {
   const SuperStrong = ({ children }) => (
-    <strong style={{ fontSize: "3rem" }}>{children}</strong>
+    <strong className="name-message" style={{ fontSize: "3.3rem" }}>
+      {children}
+    </strong>
   );
-
+  const strong = {
+    fontWeight: "500",
+    color: "rgb(84, 84, 84)",
+  };
   return (
     <>
       <section className="about-me">
@@ -31,7 +40,9 @@ export const Home = () => {
             </div>
             <div className="brief-intro">
               <p>
-                Creating intuitive interfaces where design meets seamless code.
+                In my spare time, I’m usually climbing, reading, hanging out, or
+                running on the outskirts. I’m enamored with creating intuitive
+                interfaces where design meets seamless code.
               </p>
             </div>
             <div className="picture-of-me">
@@ -44,34 +55,64 @@ export const Home = () => {
             </div>
           </div>
           <div>
-            <h1>Introduction</h1>
-            <div className="red-b">
-              <h2>📍Software Engineer, based in Mexico</h2>
-              <div className="flex-row grid-about-me">
-                <p>
-                  Front-End developer with a background in Software Engineering
-                  and a user-centered mindset. I build clean, responsive, and
-                  functional web solutions using modern technologies like
-                  JavaScript, React, and TaildwindCSS, I work with precision,
-                  purpose and character — ready to bring real value to any
-                  development team.
-                </p>
-                <div>
-                  <img
+            <div className="div-touch-files-1">
+              <SectionSubtitle txtSubtitle={"Introduction"} />
+              <div>
+                <div className="arriba">
+                  <div className="grid-about-me">
+                    <div className="introduction-g1">
+                      <h3>Software Engineer based in Veracruz, México</h3>
+                      <p>
+                        Front-End developer with a background in Software
+                        Engineering and a user-centered mindset. I build clean,{" "}
+                        <span style={strong}>responsive</span>, and functional{" "}
+                        <span style={strong}>web solutions</span> using modern
+                        technologies like <span style={strong}>JavaScript</span>
+                        , <span style={strong}>React</span>, and
+                        <span style={strong}> Taildwind CSS</span>, I work with
+                        precision, purpose and character — ready to bring real
+                        value to any development team.
+                      </p>
+                    </div>
+                    <div className="introduction-g2">
+                      {/*  <img
                     style={{ height: "130px", width: "200px" }}
                     alt="doodle"
                     src="https://firebasestorage.googleapis.com/v0/b/bornsrss-8ab5d.appspot.com/o/portfolio%2FOpen%20Doodles%20-%20Reading.png?alt=media&token=cd682543-e3e2-47a1-8caf-51627e802218"
-                  ></img>
+                    ></img> */}
+                      <Titulo measure="80px"></Titulo>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
             <div className="div-touch-files">
-              <h1> Get in touch</h1>
+              <div>
+                <SectionSubtitle txtSubtitle={"Let's create and conect"} />
+                <p>
+                  Explore my professional experience and check out my CV in the
+                  links below.
+                </p>
+                <p>Currently available for on-site and remote work</p>
+              </div>
               <div className="flex-row">
-                <Folder label="LinkedIn" color="#D8D2FF" />
-                <Folder label="GitHub" color="#D2F8D2" />
-                <Folder label="Full CV" color="#C4B5FD" />
-                <Folder label="Full CV" color="#fdb5e7ff" />
+                <Folder
+                  linkMedia={
+                    "https://www.linkedin.com/in/bornsrss/details/certifications/"
+                  }
+                  label="LinkedIn"
+                  color="#FF6B35"
+                />
+                <Folder
+                  linkMedia={"https://github.com/bornsrss14"}
+                  label="GitHub"
+                  color="#F7B500"
+                />
+                <Folder linkMedia={"#hj"} label="Full CV" color="#3c3cbf" />
+
+                <Link to={"/ui-components"}>
+                  <Folder label="UI Components" color="#00C2CB"></Folder>
+                </Link>
               </div>
             </div>
           </div>
@@ -93,12 +134,12 @@ export const Home = () => {
             </div>
             <div className="flex-hash">
               <p>#SQL</p>
-              <p>#Java</p>
+              <p>#NodeJs</p>
             </div>
             <div className="flex-hash">
               <p>#Figma</p>
               <p>#SQL</p>
-              <p>#Java</p>
+              <p>#Hooks</p>
             </div>
             <div className="flex-hash">
               <p>#TypeScript</p>
@@ -113,65 +154,74 @@ export const Home = () => {
       </section>
       <section className="grid-experience">
         <div className="item">
-          <div className="flex-row">
-            <h1>Experience</h1>
-            <div className="big-circle">
-              <IconChevronDown />
-            </div>
-          </div>
+          <div id="myResumen"></div>
+          <SectionSubtitle txtSubtitle={"Experience"} />
           <div>
-            <ExperienceItem />
-            <ExperienceItem />
-            <ExperienceItem />
+            <ExperienceItem
+              typeWork="Auxiliar notarial"
+              place="Notaria no. 9"
+              startDate="jan, 2025"
+              yearWork={2024}
+              endDate="currenly"
+            />
+            <ExperienceItem
+              yearWork={2023}
+              typeWork="Diseñadora editorial | publicidad"
+              place="Editorial El Buen Tono"
+              startDate=" march, 2023"
+              endDate="Aug, 2023"
+            />
+            <ExperienceItem
+              yearWork={2023}
+              typeWork="emprendedor"
+              place="pandasneezing: Own business"
+              startDate="  Oct, 2023,"
+              endDate="jul, 2024"
+            />
           </div>
         </div>
         <div className="item">
-          <div className="flex-row">
-            <h1>Expertice</h1>
-            <div className="big-circle">
-              <IconChevronDown />
-            </div>
-          </div>
-          <div className="line-full"></div>
+          <SectionSubtitle txtSubtitle={"Expertice"} />
+
           <div>
-            <p>
-              Logo, brand identity, packagin, Poster y Editorial, Social media,{" "}
-              3D and motion graphics
-            </p>
+            <p>React.js, JavaScript (ES6+), HTML5, CSS3</p>
+            <p>Responsive design & cross-browser compatibility</p>
+            <p>Component-based architecture and reusable UI patterns</p>
+            <p> Tailwind CSS, CSS Modules, </p>
+            <p> UX principles and design systems</p>
+            <p> Git & GitHub</p>
+            <p>API integration (REST)</p>
+            <p>State management (React hooks, Context API)</p>
+            <p>Basic SEO best practices</p>
           </div>
-          <div className="flex-row">
-            <h1>Hardskill</h1>
-            <div className="big-circle">
-              <IconChevronDown />
-            </div>
-          </div>
+          <div className="line-full-2"></div>
+
+          <SectionSubtitle txtSubtitle={"Hardskill"} />
+
           <div>
             <p>
               Aqui van las coasas que se supone van en el apaartado de los logos
             </p>
           </div>
-          <div className="flex-row">
-            <h1>Softskill</h1>
-            <div className="big-circle">
-              <IconChevronDown />
-            </div>
-          </div>
+          <div className="line-full-2"></div>
+
+          <SectionSubtitle txtSubtitle={"Softskill"} />
           <div>
             <BtnClassic color="blue" btnText={"#Creativity"}></BtnClassic>
             <BtnClassic color="white" btnText={"#TimeManagment"}></BtnClassic>
             <BtnClassic color="blue" btnText={"#TeamWork"}></BtnClassic>
             <BtnClassic color="white" btnText={"#Communication"}></BtnClassic>
-            <BtnClassic color="blue" btnText={"#Debe_Otra"}></BtnClassic>
+            <BtnClassic color="blue" btnText={"#AgileEnvironment"}></BtnClassic>
+            <BtnClassic
+              color="blue"
+              btnText={"#TeamCollaboration"}
+            ></BtnClassic>
           </div>
         </div>
         <div className="item">
-          <div className="flex-row">
-            <h1>Education</h1>
-            <div className="big-circle">
-              <IconChevronDown />
-            </div>
-          </div>
+          <SectionSubtitle txtSubtitle={"Education"} />
           <EducationItem
+            course={false}
             date="2025"
             subtitle="Universidad Veracruzana"
             title="Licenciatura, Ingeniería de Software"
@@ -180,26 +230,32 @@ export const Home = () => {
             date="2024"
             subtitle="Cursera"
             title="Google UX Design Professional Certificate"
+            linkCertified={
+              "https://www.coursera.org/account/accomplishments/verify/ISY3NR7SA7XF?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course"
+            }
           />
           <EducationItem
             date="2024"
             subtitle="Udemy"
             title="JavaScript Course 2024"
+            linkCertified="https://www.udemy.com/certificate/UC-39b84bf6-d226-4f6f-b66f-2c52ee5b06f0/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com"
           />
           <EducationItem
             date="feb. 2024"
             subtitle="freeCodeCamp"
             title="Responsive Web Design"
+            linkCertified="https://www.freecodecamp.org/certification/bornsrss/responsive-web-design"
           />
           <EducationItem
             date="jul. 2025"
             subtitle="Udemy"
             title="TypeScript Fundamentals"
+            linkCertified="https://www.udemy.com/certificate/UC-7486e84a-fbdd-461d-863f-14fc2c348fbb/"
           />
         </div>
       </section>
       <footer className="footer">
-        <p>Esto es el footer</p>
+        <Footer></Footer>
       </footer>
     </>
   );

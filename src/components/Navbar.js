@@ -8,10 +8,13 @@ export const Navbar = () => {
     <div className="flex-row div-navbar">
       <Link to={"/"}>
         <div className="flex-row">
-          <h3>pandasneezing</h3>
+          <h3>
+            <span style={{ color: "rgba(17, 0, 255, 1)" }}>panda</span>
+            sneezing
+          </h3>
           <LogoScalable
             imagenImg={
-              "https://as1.ftcdn.net/jpg/03/52/92/98/1000_F_352929888_4qsEWbJfmOrYWiJJpuEqfSyPDGryMkuH.jpg"
+              "https://firebasestorage.googleapis.com/v0/b/bornsrss-8ab5d.appspot.com/o/splits-bills%2Fpandas.png?alt=media&token=d45078fa-d2c2-4db5-9a5a-322b7fd092d2"
             }
             customHeight="30px"
             customWidth="30px"
@@ -19,23 +22,24 @@ export const Navbar = () => {
         </div>
       </Link>
 
-      <ul className="flex-row">
+      <ul className="flex-row-navbar">
         <li>
-          <a href="#lss">About me</a>
+          <a href="#myResumen">Resume</a>
         </li>
         <li>
-          <a href="#lss">Resume</a>
+          <Link to={"/about-me"}>About me</Link>
         </li>
+
         <li>
           <Link to={"/blog"}>Articles</Link>
         </li>
         <li>
-          <Link to={"/"}>Contact</Link>
+          <Link to={"/contact"}>Contact</Link>
         </li>
       </ul>
       <div>
         {language === "EN" && (
-          <div className="flex-row">
+          <div className="flex-row-nav">
             <p>EN</p>
             <LogoScalable
               imagenImg={

@@ -2,13 +2,14 @@ import React from "react";
 
 export const BtnClassic = ({ color, btnText }) => {
   const StyleBtn = {
-    color: color === "white" ? "blue" : "white",
-    backgroundColor: color === "white" ? "white" : "blue",
+    color: color === "white" ? "#05054F" : "white",
+    backgroundColor: color === "white" ? "white" : "#05054F",
     border: `1px solid ${color === "white" ? "blue" : "none"}`,
+    cursor: "pointer",
   };
   return (
     <>
-      <button style={StyleBtn} className="btn-clasic-blue">
+      <button onSubmit={""} style={StyleBtn} className="btn-clasic-blue">
         {btnText}
       </button>
     </>

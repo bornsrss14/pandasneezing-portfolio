@@ -6,6 +6,7 @@ export const LogoScalable = ({ imagenImg, customHeight, customWidth }) => {
     height: customHeight,
     cursor: "pointer",
     borderRadius: "50%",
+    backgroundColor: "white",
     overflow: "hidden",
   };
   return (
