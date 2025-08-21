@@ -53,8 +53,51 @@ li {
 .flex-row-nav {
   display: flex;
   flex-direction: row;
-  gap: 1.2rem;
+  place-items: center;
+  gap: 0.5rem;
   font-weight: 700;
+}
+
+.wrapper-languajes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  background-color: white;
+  width: 10rem;
+  padding: 0.7rem 1rem;
+  height: 2rem;
+}
+.item-idiom {
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  place-content: center;
+  height: 100%;
+}
+
+.container-col {
+  display: flex;
+  flex-direction: column; /* los hijos se acomodan en columna si quieres */
+  gap: 0.5rem; /* espacio opcional entre filas */
+}
+.submenu {
+  display: none;
+  list-style: none;
+  position: absolute;
+  top: 70%;
+  right: 3rem;
+  background-color: white;
+  padding: 0.5rem 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+  text-align: left;
+  z-index: 100;
+}
+
+.flex-row-nav:hover .submenu {
+  display: block;
 }
 
 .flex-row-navbar {
@@ -133,9 +176,8 @@ li {
   height: 23px;
   border-radius: 6px 6px 0 0;
   /* background-color: #a5f3fc; */
-  box-shadow: inset 0 -1px 3px rgba(179, 179, 179, 0.1);
+  box-shadow: inset 0 -1px 3px rgba(232, 156, 156, 0.97);
 }
-
 .folder-label {
   padding: 10px;
   font-weight: 600;
@@ -305,7 +347,9 @@ li {
   height: 100%;
 }
 .leftForm {
-  background-color: #05054f;
+  background: #0f0c29; /* fallback for old browsers */
+  background: rgb(60, 60, 191);
+
   color: white;
 }
 .rightForm {
@@ -319,7 +363,7 @@ li {
   display: grid;
   grid-template-columns: 26rem 1fr;
   margin: 2.4rem 3rem;
-  background-color: beige;
+  background: #f9f9ff; /* fallback for old browsers */
 }
 .container-arrow-hash {
   display: flex;
@@ -424,7 +468,6 @@ li {
   left: 0;
   bottom: 0;
   z-index: -9;
-  background-color: rgba(238, 130, 238, 0.269);
 }
 
 .photo {
@@ -475,7 +518,7 @@ li {
   border: solid 1px rgba(0, 0, 255, 0.238);
   border-radius: 15px;
   min-width: 15rem;
-  background-color: #f9fafb;
+  background-color: #f9f9ff;
   max-width: 93%;
   height: auto;
   padding: 1rem 1.4rem;
@@ -559,7 +602,8 @@ li {
   border-radius: 15px;
   min-width: 15rem;
   color: white;
-  background-color: #05054f;
+  /* background-color: #05054f; */
+  background-color: rgb(60, 60, 191);
   max-width: 93%;
   height: auto;
   padding: 1rem 1.4rem;
@@ -574,7 +618,8 @@ li {
 .footer {
   min-width: 100%;
   height: 20rem;
-  background-color: rgb(5, 5, 79);
+  /* background-color: rgb(5, 5, 79); */
+  background-color: rgb(60, 60, 191);
 }
 
 .arrow {
@@ -595,7 +640,6 @@ li {
   cursor: pointer;
 }
 .message-footer-bye {
-  font-family: "Playfair Display", serif;
   font-size: 5rem;
   color: #3c3cbf;
 }
@@ -699,7 +743,7 @@ li {
   font-size: 2.3rem;
 }
 .div-item-left {
-  margin: 1rem 1.5rem;
+  margin: 1.5rem 1.7rem;
   padding: 1rem 1.4rem;
 }
 
@@ -748,7 +792,7 @@ textarea {
 }
 
 .mariposa {
-  height: 170px;
+  height: 342px;
   width: auto;
   position: absolute;
   top: 0;
@@ -787,12 +831,12 @@ textarea {
 }
 
 .projects-intro-text p strong {
-  color: #05054f; /* resaltar keywords */
+  color: #3c3cbf; /* resaltar keywords */
   font-weight: 700;
 }
 
 .projects-intro-text p:hover {
-  color: #3333aa; /* efecto hover opcional para dinamismo */
+  color: #3c3cbf; /* efecto hover opcional para dinamismo */
 }
 
 .media-loading {
@@ -882,4 +926,159 @@ textarea {
   width: 126px;
   height: 240px;
   background: #f5f5f5; /* Fondo para el área de carga */
+}
+
+.full-article-container {
+  display: grid;
+  grid-template-columns: 10rem 1fr 1fr;
+  border-top: 1px solid rgb(167, 167, 167);
+  max-width: 80%;
+  gap: 2rem;
+  margin: 2rem auto;
+  height: fit-content;
+  padding: 3rem 1rem;
+  justify-items: center;
+}
+.view-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 24rem);
+  justify-content: center;
+  width: 100%;
+  margin: 2rem 0 0 0;
+  gap: 1rem;
+}
+.full-article-container-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 27rem;
+  gap: 0.5rem;
+  height: 35rem;
+  /* padding: 0rem; */
+  justify-items: center;
+}
+.date-article {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+.full-article-container:hover,
+.full-article-container-grid:hover {
+  background-color: #5f7cff1d;
+}
+.hero-articles {
+  max-width: 80%;
+  margin: 1rem auto;
+  padding: 1rem;
+  text-align: center;
+}
+.container-grid-view {
+  display: flex;
+  max-width: 80%;
+  min-width: 14rem;
+  margin: 0 auto;
+  justify-content: space-between;
+  padding: 5px 1%;
+  align-items: center;
+}
+.icono-view {
+  cursor: pointer;
+}
+.img-article {
+  height: 16rem;
+  width: 100%;
+  background-color: white;
+}
+
+.enlace {
+  color: #3333aa;
+  display: flex;
+  place-items: center;
+  margin: 1rem 0;
+}
+
+.enlace:hover {
+  color: gray;
+  cursor: pointer;
+}
+.brief-description {
+  width: 100%;
+  height: auto;
+  padding: 1rem 0 1rem 0;
+  border-bottom: 1px solid gray;
+}
+.container-article {
+  max-width: 100%;
+  width: 60%;
+  margin: 2rem auto;
+}
+
+/* about me  */
+.fine-line {
+  width: 80%;
+  height: 3px;
+  margin: 3rem auto;
+  background-color: #edf3ff;
+}
+
+.item-about {
+  padding: 1rem 2rem;
+}
+#main-grid-about {
+  display: grid;
+  padding: 2rem 0;
+  grid-template-columns: 45% 1fr;
+  gap: 1rem;
+  max-width: 80%;
+  height: 100vh;
+  margin: 1rem auto;
+  background: #fff5d6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #ffffff,
+    #fff8e1
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ffffff,
+    #fffbee
+  ); /* W3C, IE 1C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/* masonry */
+
+.masonry-grid {
+  display: block;
+  position: relative;
+}
+
+.masonry-sizer,
+.masonry-item {
+  width: 30%; /* ajusta segun las columnas deseadas */
+}
+.masonry-item {
+  margin-bottom: 1rem;
+}
+
+.masonry-item img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+  height: auto;
+}
+
+.sec-masonry {
+  overflow: auto;
+  position: relative;
+  scrollbar-width: none; /* para Firefox */
+  -ms-overflow-style: none; /* para Internet Explorer y Edge */
+}
+.sec-masonry ::-webkit-scrollbar {
+  display: none;
+}
+.paragraph-about-me {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin: 1.4rem 0;
+  font-size: 1.2rem;
 }

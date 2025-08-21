@@ -17,7 +17,7 @@ const DataProjects = [
     id: 1002,
     projectTitle: "Notaria 9: Landing Page",
     briefDescription:
-      "Este proyecto se enfoca en la This project was created as a tool for Pokémon fans and curious developers. Check out data, explore Pokémon, and learn about them! All the content is educational.",
+      "A responsive and user-friendly landing page for Notary 9. Featuring a dynamic openign hours display and basic SEO-optimized structure",
     url_video:
       "https://firebasestorage.googleapis.com/v0/b/bornsrss-8ab5d.appspot.com/o/portfolio%2FDuoVideo.mp4?alt=media&token=5ab34f55-8a07-4a23-bc93-fe12902418db",
     firstScreenShot:
@@ -43,7 +43,7 @@ const DataProjects = [
     id: 1004,
     projectTitle: "Hiking Map",
     briefDescription:
-      "Esta app muestra la interacción de mapas para poder dejar puntsos de encuentro ya sea por bicicleta o por recorrido",
+      "This app uses leaflet maps to allow users to interactively place pins, whether traveling by bike or on foot. Also put in practice user experience principles throughout the design.",
     url_video: "",
     firstScreenShot:
       "https://firebasestorage.googleapis.com/v0/b/bornsrss-8ab5d.appspot.com/o/portfolio%2Fscreens%2Ffourth-ss-one.jpg?alt=media&token=f5ffe689-d038-41a9-8610-4e8018680c3f",

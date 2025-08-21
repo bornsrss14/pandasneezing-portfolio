@@ -20,7 +20,10 @@ const PortfolioFolderLayout = () => {
       <div className="card">
         <div className="cubierta-blanca"></div>
         <button className="card-white"></button>
-        <h1 className="font-sub-titles">Ros's Classified File.</h1>
+
+        <h2 className="font-sub-titles">
+          {activeTab ? activeItem.projectTitle : "Ros's Classified File."}
+        </h2>
         <div className="tabs">
           {tabs.map((tab, index) => (
             <button

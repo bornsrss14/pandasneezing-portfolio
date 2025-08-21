@@ -12,20 +12,30 @@ export const DefaultCard = () => {
           ></img>
         </div>
         <p>
-          Bienvenido a mi selección de proyectos más destacados. Aquí
-          encontrarás aplicaciones y sitios web desarrollados con{" "}
-          <strong>React</strong>, <strong>JavaScript</strong> y un enfoque en{" "}
-          <strong>diseño responsivo</strong> y <strong>UX/UI</strong>.
+          Welcome to my main highlighted project section. Here, you can explore
+          web apps I've developed using <strong>React</strong>,and{" "}
+          <strong>JavaScript</strong>, with a main focus on{" "}
+          <strong>responsive design</strong> and <strong>UX/UI</strong>.
         </p>
         <p>
-          Cada proyecto incluye una vista previa animada y una breve descripción
-          para que puedas conocer su funcionalidad y el problema que resuelve.
+          <strong>1.</strong> Each project includes an animated preview and a
+          summary, allowing you to explore its functionality and understand the
+          problem I tackled using these technologies
         </p>
         <p>
-          Explora las pestañas de colores para descubrir cada uno en detalle.
+          <strong>2.</strong> Browse the colored tabs to discover each project
+          in detail
         </p>
-        <p>Explora mi proyecto con el demo live en cada link</p>
-        <p>Mi código disponible en cada repositorio de Git</p>
+        <p>
+          {" "}
+          <strong>3.</strong> Check out the live demo to experience the project
+          firsthand.
+        </p>
+        <p>
+          {" "}
+          <strong>4.</strong> Acces the Github repo to see the code behind each
+          app.
+        </p>
       </div>
     </div>
   );

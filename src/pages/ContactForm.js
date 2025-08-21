@@ -4,11 +4,7 @@ import LogoScalable from "../core/LogoScalable";
 
 export const ContactForm = () => {
   const [state, handleSubmit] = useForm("manbkqel");
-  {
-    /*  if (state.succeeded) {
-    return <p>Thanks for joining!</p>;
-  } */
-  }
+
   return (
     <>
       <main className="grid-footer-main">
@@ -39,18 +35,17 @@ export const ContactForm = () => {
               </a>
             </div>
             <div className="flex-row">
-              <p className="typeWork-txt">Aquioto</p>
-              <p className="typeWork-txt">ksdn</p>
-              <p className="typeWork-txt">Aquio</p>
+              <p className="typeWork-txt">UX </p>
+              <p className="typeWork-txt">/</p>
+              <p className="typeWork-txt">UI</p>
             </div>
           </div>
           <div className="div-item-left">
             <h2 id="contact-title" className="font-form-sub">
-              Have any question or feedback?!
+              question or feedback?!
             </h2>
             <p>
-              Please hit the button, and I’ll contact you by e-mail within 24
-              hours. I’d be happy to hear from you!
+              Hit the button, and I’ll contact you by e-mail within 24 hours.
             </p>
             <p style={{ fontSize: "10rem" }}>ツ</p>
           </div>
@@ -61,12 +56,10 @@ export const ContactForm = () => {
             <p>Thanks for joining!</p>
           ) : (
             <>
-              <h2 id="contact-title" className="font-sub-titles">
-                Don't hesitate to reach out! ⌨️
-              </h2>
-
               <div className="div-item-left">
-                <p>Got a project idea, a question, or just want to say hi?</p>
+                <h2 id="contact-title" className="font-sub-titles">
+                  Don't hesitate to reach out! ⌨️
+                </h2>
                 <p>
                   Drop me a message - I’ll reply as soon as I can. Can’t wait to
                   hear from you!

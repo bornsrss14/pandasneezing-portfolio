@@ -4,11 +4,9 @@ import PortfolioFolderLayout from "../components/PortfolioFolderLayout";
 import BtnClassic from "../core/BtnClassic";
 import { IconArrowLeft } from "@tabler/icons-react";
 import Folder from "../core/Folder";
-import PostIt from "../core/PostIt";
 
 import TypeIt from "typeit-react";
 
-import { IconChevronDown } from "@tabler/icons-react";
 import Footer from "../components/Footer";
 import Titulo from "../core/Titulo";
 import { SectionSubtitle } from "../core/SectionSubtitle";
@@ -24,6 +22,17 @@ export const Home = () => {
     fontWeight: "500",
     color: "rgb(84, 84, 84)",
   };
+  const listExpertice = [
+    "React.js, JavaScript ES6+, HTML5, CSS3",
+    "Responsive design & cross-browser compatibility",
+    " Component-based architecture and reusable UI patterns",
+    " Tailwind CSS, CSS Modules",
+    " UX principles and design systems",
+    " Git & GitHub",
+    "API integration (REST)",
+    "State management (React hooks, Context API)",
+    "Basic SEO best practices",
+  ];
   return (
     <>
       <section className="about-me">
@@ -61,7 +70,7 @@ export const Home = () => {
                 <div className="arriba">
                   <div className="grid-about-me">
                     <div className="introduction-g1">
-                      <h3>Software Engineer based in Veracruz, México</h3>
+                      <h3>Front-End development based in Veracruz, México</h3>
                       <p>
                         Front-End developer with a background in Software
                         Engineering and a user-centered mindset. I build clean,{" "}
@@ -101,17 +110,17 @@ export const Home = () => {
                     "https://www.linkedin.com/in/bornsrss/details/certifications/"
                   }
                   label="LinkedIn"
-                  color="#FF6B35"
+                  color="#F7B500"
                 />
                 <Folder
                   linkMedia={"https://github.com/bornsrss14"}
                   label="GitHub"
                   color="#F7B500"
                 />
-                <Folder linkMedia={"#hj"} label="Full CV" color="#3c3cbf" />
+                <Folder linkMedia={"#hj"} label="Full CV" color="#F7B500" />
 
                 <Link to={"/ui-components"}>
-                  <Folder label="UI Components" color="#00C2CB"></Folder>
+                  <Folder label="UI Components" color="#F7B500"></Folder>
                 </Link>
               </div>
             </div>
@@ -183,25 +192,25 @@ export const Home = () => {
         <div className="item">
           <SectionSubtitle txtSubtitle={"Expertice"} />
 
-          <div>
-            <p>React.js, JavaScript (ES6+), HTML5, CSS3</p>
-            <p>Responsive design & cross-browser compatibility</p>
-            <p>Component-based architecture and reusable UI patterns</p>
-            <p> Tailwind CSS, CSS Modules, </p>
-            <p> UX principles and design systems</p>
-            <p> Git & GitHub</p>
-            <p>API integration (REST)</p>
-            <p>State management (React hooks, Context API)</p>
-            <p>Basic SEO best practices</p>
-          </div>
+          <ul>
+            {listExpertice.map((ex, inx) => {
+              return <li key={inx}>{`${inx + 1}. ${ex}`}</li>;
+            })}
+          </ul>
           <div className="line-full-2"></div>
 
           <SectionSubtitle txtSubtitle={"Hardskill"} />
 
           <div>
-            <p>
-              Aqui van las coasas que se supone van en el apaartado de los logos
-            </p>
+            <BtnClassic color="blue" btnText={"React"}></BtnClassic>
+            <BtnClassic color="white" btnText={"HTML"}></BtnClassic>
+            <BtnClassic color="blue" btnText={"JavaScript"}></BtnClassic>
+            <BtnClassic color="blue" btnText={"tailwind css"}></BtnClassic>
+            <BtnClassic color="white" btnText={"NodeJs"}></BtnClassic>
+            <BtnClassic color="white" btnText={"MongoDB"}></BtnClassic>
+            <BtnClassic color="white" btnText={"TypeScript"}></BtnClassic>
+            <BtnClassic color="white" btnText={"HTML"}></BtnClassic>
+            <BtnClassic color="blue" btnText={"MySQL"}></BtnClassic>
           </div>
           <div className="line-full-2"></div>
 

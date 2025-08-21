@@ -11,6 +11,7 @@ import Navbar from "./components/Navbar";
 import ContactForm from "./pages/ContactForm";
 import AboutMe from "./pages/AboutMe";
 import UiComponents from "./pages/UiComponents";
+import DetailedArticle from "./pages/DetailedArticle";
 
 function App() {
   return (
@@ -24,6 +25,10 @@ function App() {
           <Route path="/" element={<Home />}></Route>
           <Route path="/blog" element={<Articles />}></Route>
           <Route path="*" element={<NotFound />}></Route>
+          <Route
+            path="/detalle-articulo/:id"
+            element={<DetailedArticle />}
+          ></Route>
         </Routes>
       </BrowserRouter>
     </>

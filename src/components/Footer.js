@@ -33,7 +33,7 @@ export const Footer = () => {
         <div className="flex-row">
           <LogoScalable
             imagenImg={
-              "https://firebasestorage.googleapis.com/v0/b/bornsrss-8ab5d.appspot.com/o/splits-bills%2Fpandas.png?alt=media&token=d45078fa-d2c2-4db5-9a5a-322b7fd092d2"
+              "https://firebasestorage.googleapis.com/v0/b/bornsrss-8ab5d.appspot.com/o/portfolio%2Fpandas-black-white.png?alt=media&token=39f89382-5898-47d9-83ce-72b11a6872ca"
             }
             customHeight="30px"
             customWidth="30px"

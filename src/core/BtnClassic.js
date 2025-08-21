@@ -2,8 +2,8 @@ import React from "react";
 
 export const BtnClassic = ({ color, btnText }) => {
   const StyleBtn = {
-    color: color === "white" ? "#05054F" : "white",
-    backgroundColor: color === "white" ? "white" : "#05054F",
+    color: color === "white" ? "rgb(60, 60, 191)" : "white",
+    backgroundColor: color === "white" ? "white" : "rgb(60, 60, 191)",
     border: `1px solid ${color === "white" ? "blue" : "none"}`,
     cursor: "pointer",
   };

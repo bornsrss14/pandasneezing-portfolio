@@ -4,7 +4,7 @@ const Folder = ({
   linkTo,
   linkMedia,
   label = "Proyecto",
-  color = "#FACC15",
+  color = " rgb(255, 187, 0)",
 }) => {
   const style = { backgroundColor: color, color: "white" };
   return (

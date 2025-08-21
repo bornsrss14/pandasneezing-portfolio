@@ -1,20 +1,36 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import LogoScalable from "../core/LogoScalable";
+import { IconChevronDown } from "@tabler/icons-react";
+import LanguageToggle from "../core/LanguageToggle";
 
 export const Navbar = () => {
-  const [language, setLanguage] = useState("EN");
+  const languajes = [
+    {
+      idiom: "EN",
+      flag: "https://upload.wikimedia.org/wikipedia/commons/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg",
+    },
+    {
+      idiom: "ES",
+      flag: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Mexico.svg/330px-Flag_of_Mexico.svg.png",
+    },
+  ];
+  const [languaje, setLanguaje] = useState(languajes[0]);
+  const toggleLanguaje = () => {
+    setLanguaje((prev) => (prev.idiom === "EN" ? languajes[1] : languajes[0]));
+  };
+  const viceversa = languaje.idiom === "EN" ? languajes[1] : languajes[0];
   return (
     <div className="flex-row div-navbar">
       <Link to={"/"}>
         <div className="flex-row">
           <h3>
-            <span style={{ color: "rgba(17, 0, 255, 1)" }}>panda</span>
+            <span style={{ color: "rgb(60, 60, 191)" }}>panda</span>
             sneezing
           </h3>
           <LogoScalable
             imagenImg={
-              "https://firebasestorage.googleapis.com/v0/b/bornsrss-8ab5d.appspot.com/o/splits-bills%2Fpandas.png?alt=media&token=d45078fa-d2c2-4db5-9a5a-322b7fd092d2"
+              "https://firebasestorage.googleapis.com/v0/b/bornsrss-8ab5d.appspot.com/o/portfolio%2Fpandas-black-white.png?alt=media&token=39f89382-5898-47d9-83ce-72b11a6872ca"
             }
             customHeight="30px"
             customWidth="30px"
@@ -37,32 +53,24 @@ export const Navbar = () => {
           <Link to={"/contact"}>Contact</Link>
         </li>
       </ul>
-      <div>
-        {language === "EN" && (
-          <div className="flex-row-nav">
-            <p>EN</p>
-            <LogoScalable
-              imagenImg={
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/960px-Flag_of_the_United_Kingdom_%281-2%29.svg.png"
-              }
-              customHeight={"1.3rem"}
-              customWidth={"1.3rem"}
-            ></LogoScalable>
-          </div>
-        )}
+      <div className="container-col">
+        <div className="flex-row-nav">
+          <p>{viceversa.idiom}</p>
+          <LogoScalable
+            imagenImg={viceversa.flag}
+            customHeight={"1.3rem"}
+            customWidth={"1.3rem"}
+          />
+          <IconChevronDown />
 
-        {language === "ES" && (
-          <div className="flex-row">
-            <p>ES</p>
-            <LogoScalable
-              imagenImg={
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Mexico.svg/1200px-Flag_of_Mexico.svg.png"
-              }
-              customHeight={"1.3rem"}
-              customWidth={"1.3rem"}
-            ></LogoScalable>
+          <div className="submenu">
+            <LanguageToggle
+              toggleLanguaje={toggleLanguaje}
+              languaje={languaje}
+              setLanguaje={setLanguaje}
+            />
           </div>
-        )}
+        </div>
       </div>
     </div>
   );
