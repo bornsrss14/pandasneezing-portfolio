@@ -1,4 +1,4 @@
-import { IconFlareFilled, IconFlare } from "@tabler/icons-react";
+import { IconFlareFilled } from "@tabler/icons-react";
 import MasonryGallery from "../components/MasonryGallery";
 import BtnClassic from "../core/BtnClassic";
 import Footer from "../components/Footer";
