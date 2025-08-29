@@ -29,11 +29,7 @@ export const ArticleItemList = ({ item }) => {
         </div>
 
         <div className="brief-description">
-          <p>
-            esto es un pequeño asod sadionas asdnads adsjks ajskdn asojasds
-            asdsadinasdndsknsao sadoidas pequeño asod sadionas asdnads adsjks
-            ajskdn asojasds asdsadinasdndsknsao sadoidas
-          </p>
+          <p className="truncatedTxt">{item.content}</p>
         </div>
         <div className="enlace ">
           <p> View Details</p>

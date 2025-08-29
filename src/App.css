@@ -1107,3 +1107,11 @@ textarea {
   height: 3rem;
   background-color: #333;
 }
+
+.truncatedTxt {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /*numero de lineas que se muestran*/
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
