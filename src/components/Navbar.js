@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import LogoScalable from "../core/LogoScalable";
 import { IconChevronDown } from "@tabler/icons-react";

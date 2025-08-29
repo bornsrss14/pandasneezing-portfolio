@@ -1,7 +1,4 @@
-import React from "react";
-
 const Folder = ({
-  linkTo,
   linkMedia,
   label = "Proyecto",
   color = " rgb(255, 187, 0)",

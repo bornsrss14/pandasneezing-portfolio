@@ -1,12 +1,5 @@
-import {
-  IconBrandLinkedinFilled,
-  IconBrandGithub,
-  IconBrandPinterestFilled,
-  IconBrandBlogger,
-  IconChevronCompactUp,
-} from "@tabler/icons-react";
+import { IconChevronCompactUp } from "@tabler/icons-react";
 import LogoScalable from "../core/LogoScalable";
-import { Link } from "react-router-dom";
 import SocialMediaIcons from "./SocialMediaIcons";
 
 export const Footer = () => {

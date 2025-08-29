@@ -1,4 +1,3 @@
-import React from "react";
 import { IconSchool, IconRosetteDiscountCheck } from "@tabler/icons-react";
 
 export const EducationItem = ({
