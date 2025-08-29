@@ -6,20 +6,13 @@ export const DetailedObjectArticle = ({ objectItem }) => {
     <>
       <article className="article-margin">
         <h1>{objectItem.title}</h1>
-        <div className="flex-row">
+        <div className="hero-article">
           <p>
             <em>{objectItem.content}</em>
           </p>
           <div>
-            <img
-              height={"200px"}
-              alt="img-banner"
-              src={objectItem.articleImg}
-            />
-            <p className="typeWork-txt">
-              {" "}
-              detail: adjunto captura de la advertencia hecha por gitGardian
-            </p>
+            <img width={"80%"} alt="img-banner" src={objectItem.banner} />
+            <p className="typeWork-txt">{objectItem.balazoArticleImg}</p>
           </div>
         </div>
         {objectItem.paragrapsArticle.map((section, index) => {
@@ -31,13 +24,54 @@ export const DetailedObjectArticle = ({ objectItem }) => {
                 </h3>
               )}
               {section.paragraph && <p>{section.paragraph}</p>}
-              {section.list && section.list.length > 0 && (
+
+              {section.lista && section.lista.length > 0 && (
                 <ul>
-                  {section.list.map((item, idx) => {
-                    return <li key={idx}>{item}</li>;
+                  {section.lista.map((objetoLista, index) => {
+                    return (
+                      <li key={index}>
+                        {" "}
+                        •{objetoLista.txt_item}
+                        <div style={{ padding: "0 1rem" }}>
+                          {objetoLista.subList
+                            ? objetoLista.subList.map((itemSub, idx) => {
+                                return <p key={idx}> ○ {itemSub}</p>;
+                              })
+                            : ""}
+                        </div>
+                      </li>
+                    );
                   })}
                 </ul>
               )}
+
+              <div className={`${section.codeSnippet.alignDiv}`}>
+                <div className="firstSnippet">
+                  {section?.codeSnippet?.codeBreakdown?.length > 0
+                    ? section.codeSnippet.codeBreakdown.map(
+                        (itemBreakdown, key) => (
+                          <p key={key}>{`• ${itemBreakdown}`}</p>
+                        )
+                      )
+                    : ""}
+                </div>
+                <div className="secondSnippet">
+                  {section?.codeSnippet && (
+                    <h3>{section.codeSnippet.codeTitleImg}</h3>
+                  )}
+                  {section.codeSnippet?.codePreview && (
+                    <>
+                      <img
+                        src={section.codeSnippet.codePreview}
+                        width={"100%"}
+                        alt="img-code-preview"
+                      />
+                      <p>{section.codeSnippet.balazo}</p>
+                    </>
+                  )}
+                </div>
+              </div>
+
               {section.code && <p>{section.code}</p>}
             </section>
           );
@@ -53,6 +87,7 @@ export const DetailedObjectArticle = ({ objectItem }) => {
           </p>
         </section>
       </article>
+
       <section className="container-social-media flex-row">
         <div className="flex-row">
           <LogoScalable

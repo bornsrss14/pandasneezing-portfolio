@@ -5,12 +5,12 @@ const DataProjects = [
     briefDescription:
       "This project was created as a tool for Pokémon fans and curious developers. Check out data, explore Pokémon, and learn about them! All the content is educational.",
     url_video:
-      "https://firebasestorage.googleapis.com/v0/b/bornsrss-8ab5d.appspot.com/o/portfolio%2FDuoVideo.mp4?alt=media&token=5ab34f55-8a07-4a23-bc93-fe12902418db",
+      "https://firebasestorage.googleapis.com/v0/b/bornsrss-8ab5d.appspot.com/o/portfolio%2Fvideos%2F_video_pokedex_web.mp4?alt=media&token=4726635d-1f24-46b8-9a8b-1afe46ccee8f",
     firstScreenShot:
-      "https://firebasestorage.googleapis.com/v0/b/bornsrss-8ab5d.appspot.com/o/portfolio%2FSS-Duolingo.jpg?alt=media&token=7f1ec968-a894-4b3a-9d9c-9fe286bb0050",
+      "https://firebasestorage.googleapis.com/v0/b/bornsrss-8ab5d.appspot.com/o/portfolio%2Fscreens%2Ffirst-ss-one.jpg?alt=media&token=56619d2e-90c0-4017-9668-db95f6b3df4b",
     secondScreenShot:
-      "https://firebasestorage.googleapis.com/v0/b/bornsrss-8ab5d.appspot.com/o/portfolio%2Fss-dos.jpeg?alt=media&token=9826bd19-8646-47df-b643-ff3027730cf5",
-    gitRepo: "https://github.com/bornsrss14",
+      "https://firebasestorage.googleapis.com/v0/b/bornsrss-8ab5d.appspot.com/o/portfolio%2Fscreens%2Ffirst-ss-two.jpg?alt=media&token=4f47cb95-1dbb-47cd-a927-8cb4c157bbee",
+    gitRepo: "https://github.com/bornsrss14/panda-pokedex",
     liveDemo: "https://pokedex-pandasneezing.netlify.app/",
   },
   {
@@ -19,11 +19,11 @@ const DataProjects = [
     briefDescription:
       "A responsive and user-friendly landing page for Notary 9. Featuring a dynamic openign hours display and basic SEO-optimized structure",
     url_video:
-      "https://firebasestorage.googleapis.com/v0/b/bornsrss-8ab5d.appspot.com/o/portfolio%2FDuoVideo.mp4?alt=media&token=5ab34f55-8a07-4a23-bc93-fe12902418db",
+      "https://firebasestorage.googleapis.com/v0/b/bornsrss-8ab5d.appspot.com/o/portfolio%2Fvideos%2F_video_notaria_web.mp4?alt=media&token=0cd57915-d45a-4586-94c2-243cde5e6c26",
     firstScreenShot:
-      "https://firebasestorage.googleapis.com/v0/b/bornsrss-8ab5d.appspot.com/o/portfolio%2Fscreens%2Fsecond-ss-one.jpg?alt=media&token=86aa5fd0-9a95-4a2d-83f5-2a9ae3fa03b4",
+      "https://firebasestorage.googleapis.com/v0/b/bornsrss-8ab5d.appspot.com/o/portfolio%2Fscreens%2Fsecond-ss-one.jpg?alt=media&token=e38f49ab-5da4-4e64-98cc-78a82282bc3e",
     secondScreenShot:
-      "https://firebasestorage.googleapis.com/v0/b/bornsrss-8ab5d.appspot.com/o/portfolio%2Fscreens%2Fsecond-ss-two.jpg?alt=media&token=f39c7963-ff75-4c9d-a6b5-bc6a139b3b29",
+      "https://firebasestorage.googleapis.com/v0/b/bornsrss-8ab5d.appspot.com/o/portfolio%2Fscreens%2Fsecond-ss-two.jpg?alt=media&token=5647ca0b-d628-440c-8dd3-6c84fe44344f",
     gitRepo: "https://github.com/bornsrss14/notaria-nueve",
     liveDemo: "",
   },

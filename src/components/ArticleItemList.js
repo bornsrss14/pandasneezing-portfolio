@@ -19,6 +19,7 @@ export const ArticleItemList = ({ item }) => {
       <div className="article-detailes">
         <div style={{ display: "flex", flexDirection: "column", gap: ".4rem" }}>
           <h2>{item.title}</h2>
+          <p>{item.subtitle}</p>
           <p>{`${item.minutesRead} min read`}</p>
           <div className="flex-row">
             {item.categories.map((cat, key) => {

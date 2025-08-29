@@ -117,7 +117,13 @@ export const Home = () => {
                   label="GitHub"
                   color="#F7B500"
                 />
-                <Folder linkMedia={"#hj"} label="Full CV" color="#F7B500" />
+                <Folder
+                  linkMedia={
+                    "https://firebasestorage.googleapis.com/v0/b/bornsrss-8ab5d.appspot.com/o/portfolio%2Fcv-rosariofuentes.pdf?alt=media&token=0ea89b39-fc83-4ca3-96dc-1c306e6aa87d"
+                  }
+                  label="Download my CV"
+                  color="#F7B500"
+                />
 
                 <Link to={"/ui-components"}>
                   <Folder label="UI Components" color="#F7B500"></Folder>
@@ -129,6 +135,7 @@ export const Home = () => {
       </section>
       <section className="grid-section-projects">
         <div className="container-arrow-hash">
+          **
           <div>
             <IconArrowLeft size={"14rem"} className="arrow" />
           </div>
