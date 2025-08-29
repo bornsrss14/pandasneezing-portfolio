@@ -100,7 +100,7 @@ export const allMainArticles = [
   },
   {
     id: 101,
-    title: "Async/await funtions",
+    title: "JavaScript Visualized: Promises & Async/Await",
     subtitle: "Loading images and the user experience",
     dateMonth: "AGU",
     dateNumber: 8,
