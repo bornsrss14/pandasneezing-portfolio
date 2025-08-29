@@ -183,7 +183,7 @@ export const Home = () => {
             <ExperienceItem
               yearWork={2023}
               typeWork="Diseñadora editorial | publicidad"
-              place="COMPAÑÍA PERIODISTICA EL BUEN TONO S.A. de C.V."
+              place="Compañia Periodistica El Buen Tono S.A. de C.V."
               startDate=" march, 2023"
               endDate="Aug, 2023"
             />
