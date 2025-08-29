@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import LogoScalable from "../core/LogoScalable";
 import { IconChevronDown } from "@tabler/icons-react";
 import LanguageToggle from "../core/LanguageToggle";
+import { useState } from "react";
 
 export const Navbar = () => {
   const languajes = [
